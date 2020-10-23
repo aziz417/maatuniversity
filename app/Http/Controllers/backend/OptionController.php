@@ -1,0 +1,99 @@
+<?php
+
+namespace App\Http\Controllers\backend;
+
+use App\Http\Controllers\Controller;
+use App\Models\Option;
+use Illuminate\Http\Request;
+
+class OptionController extends Controller
+{
+
+    public function index()
+    {
+        $options = Option::with('createdUser', 'updatedUser')->paginate(10);
+        return view('backend.option.index', compact('options'));
+    }
+
+
+    public function create()
+    {
+        return view('backend.option.create');
+    }
+
+
+    public function store(OptionRequest $request)
+    {
+        $request->status = !$request->status;
+        $onlyGo = $request->only([
+            'lesson_id',
+            'title',
+            'audio',
+            'slug',
+            'status',
+            'created_by',
+            'updated_by',
+        ]);
+
+        $question = Question::create($onlyGo);
+        if ($question){
+            Toastr::success('Question create successfully', 'Success', ["positionClass" => "toast-top-right"]);
+            return redirect()->back();
+
+        }
+    }
+    public function statusChange(Question $question)
+    {
+        $question->status = !$question->status;
+        $update = $question->update();
+        if ($update){
+            Toastr::success('Status change successfully', 'Success', ["positionClass" => "toast-top-right"]);
+            return redirect()->back();
+        }else{
+            Toastr::warning('The Identifier is wrong.. please try again', 'Warning', ["positionClass" => "toast-top-right"]);
+            return redirect()->back();
+        }
+    }
+
+    public function show($id)
+    {
+        //
+    }
+
+
+    public function edit(Question $question)
+    {
+        return view('backend.option.edit', compact('question'));
+    }
+
+
+    public function update(QuestionRequest $request, Question $question)
+    {
+        $request->status = !$request->status;
+        $onlyGo = $request->only([
+            'lesson_id',
+            'title',
+            'audio',
+            'slug',
+            'status',
+            'created_by',
+            'updated_by',
+        ]);
+
+
+        $question = $question->update($onlyGo);
+        if ($question){
+            Toastr::success('Question update successfully', 'Success', ["positionClass" => "toast-top-right"]);
+            return redirect()->route('option.index');
+        }
+    }
+
+
+    public function destroy(Question $question)
+    {
+        $question->delete();
+
+        Toastr::success('Question delete successfully', 'Success', ["positionClass" => "toast-top-right"]);
+        return redirect()->back();
+    }
+}
