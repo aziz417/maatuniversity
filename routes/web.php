@@ -28,5 +28,7 @@ Route::group(['prefix' => 'dashboard', 'middleware' => ['auth','auth'], 'namespa
     Route::resource('options', 'OptionController');
     Route::get('maths/learn', 'learning\LearnController@allQuestion')->name('learn.maths');
     Route::get('maths/questions/{question}', 'learning\LearnController@mathQuestion')->name('math.questions');
+    Route::get('question/answer', 'learning\LearnController@questionAnswer');
+    Route::get('summary/index/{summary}', 'learning\LearnController@summary')->name('summery.index');
 });
 

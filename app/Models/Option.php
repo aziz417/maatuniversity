@@ -9,6 +9,7 @@ use Illuminate\Support\Str;
 
 /**
  * @method static create(\App\Http\Requests\OptionRequest $request)
+ * @method static where(string $string, $id)
  */
 class Option extends Model
 {

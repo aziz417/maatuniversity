@@ -22,6 +22,7 @@ class QuestionController extends Controller
 
     public function create()
     {
+        Session::forget('question_id');
         return view('backend.questions.create');
     }
 

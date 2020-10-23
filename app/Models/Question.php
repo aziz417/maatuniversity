@@ -10,6 +10,7 @@ use Illuminate\Support\Str;
 /**
  * @method static create(array $onlyGo)
  * @method static active()
+ * @method static where(string $string, $id)
  */
 class Question extends Model
 {
@@ -22,6 +23,14 @@ class Question extends Model
         'created_by',
         'updated_by',
     ];
+
+    public function options(){
+        return $this->hasMany(Option::class);
+    }
+
+    public function AnswerQuestions(){
+        return $this->hasMany(Answer::class);
+    }
 
     public function getRouteKeyName()
     {
