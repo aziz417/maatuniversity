@@ -18,6 +18,8 @@
     <link rel="stylesheet" href="http://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css">
 
     <link rel="stylesheet" href="{{ asset('backend') }}/font-awesome/css/style.css">
+    <link rel="stylesheet" href="{{ asset('backend') }}/css/custom_style.css">
+
 
 </head>
 <body>

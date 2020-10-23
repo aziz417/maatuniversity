@@ -7,6 +7,7 @@ use App\Http\Requests\QuestionRequest;
 use App\Models\Question;
 use Brian2694\Toastr\Facades\Toastr;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 
 class QuestionController extends Controller
@@ -40,9 +41,10 @@ class QuestionController extends Controller
 
         $question = Question::create($onlyGo);
         if ($question){
+            $question_id = $question->id;
+            Session::put('question_id', $question_id);
             Toastr::success('Question create successfully', 'Success', ["positionClass" => "toast-top-right"]);
-            return redirect()->back();
-
+            return redirect()->route('options.create');
         }
     }
     public function statusChange(Question $question)

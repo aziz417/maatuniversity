@@ -7,7 +7,7 @@
                     <div class="card-header"><a href="{{ route('options.index') }}" class="float-right btn btn-success"><i class="fa fa-arrow-circle-left"></i> Back</a></div>
 
                     <div class="card-body">
-                        <form method="post" action="{{ route('options.store') }}">
+                        <form method="post" enctype="multipart/form-data" action="{{ route('options.store') }}">
                             @csrf
                             @include('backend.options.element')
                             <button class="btn btn-success">Submit</button>

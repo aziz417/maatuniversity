@@ -26,6 +26,7 @@ Route::group(['prefix' => 'dashboard', 'middleware' => ['auth','auth'], 'namespa
     Route::resource('questions', 'QuestionController');
     Route::get('questions/status/change/{question}', 'QuestionController@statusChange')->name('status.change');
     Route::resource('options', 'OptionController');
-    Route::get('options/status/change/{option}', 'OptionController@statusChange')->name('status.change');
+    Route::get('maths/learn', 'learning\LearnController@allQuestion')->name('learn.maths');
+    Route::get('maths/questions/{question}', 'learning\LearnController@mathQuestion')->name('math.questions');
 });
 

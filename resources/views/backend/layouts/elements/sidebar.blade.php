@@ -7,7 +7,7 @@
                 <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">My Courses</a>
                 <ul class="collapse list-unstyled" id="homeSubmenu">
                     <li>
-                        <a href="#">Math</a>
+                        <a href="{{ route('learn.maths') }}">Math</a>
                     </li>
                 </ul>
             </li>

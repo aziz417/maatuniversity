@@ -55,6 +55,6 @@ class Question extends Model
     }
 
     public function scopeActive($query){
-        return $query->where('status', 'on');
+        return $query->where('status', 1);
     }
 }

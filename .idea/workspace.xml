@@ -117,6 +117,7 @@
       <path value="$PROJECT_DIR$/vendor/phpunit/php-token-stream" />
       <path value="$PROJECT_DIR$/vendor/laravel/ui" />
       <path value="$PROJECT_DIR$/vendor/brian2694/laravel-toastr" />
+      <path value="$PROJECT_DIR$/vendor/intervention/image" />
     </include_path>
   </component>
   <component name="ProjectId" id="1jDyKtd0Ndzq0fz7USFuR1BeiaB" />
@@ -129,16 +130,16 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/backend" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Controllers" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="K:\xammp-12-9-20\htdocs\part-time\maatuniversity\app\Http\Controllers" />
       <recent name="K:\xammp-12-9-20\htdocs\part-time\maatuniversity\resources\views\backend" />
       <recent name="K:\xammp-12-9-20\htdocs\part-time\maatuniversity\public\backend\css\plugins" />
       <recent name="K:\xammp-12-9-20\htdocs\part-time\maatuniversity\public\backend\js\plugins" />
       <recent name="K:\xammp-12-9-20\htdocs\part-time\maatuniversity\public\backend\js" />
-      <recent name="K:\xammp-12-9-20\htdocs\part-time\maatuniversity\public\backend\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="K:\xammp-12-9-20\htdocs\part-time\maatuniversity\public\backend\js\plugins" />
@@ -160,7 +161,7 @@
       <option name="presentableId" value="Default" />
       <updated>1603352899021</updated>
       <workItem from="1603352900374" duration="31674000" />
-      <workItem from="1603415900654" duration="11730000" />
+      <workItem from="1603415900654" duration="24899000" />
     </task>
     <servers />
   </component>
@@ -168,17 +169,17 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1603428729689">
+    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1603441766248">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1603428729689" />
+    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1603441766248" />
     <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1603417291880">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1603417291880" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1603428267290">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1603449661638">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1603428267290" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1603449661638" />
   </component>
 </project>
