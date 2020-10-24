@@ -23,7 +23,7 @@
                             @foreach($questions as $key=>$question)
                             <tr>
                                 <th scope="row">{{ ++$key }}</th>
-                                <td>{{ ucfirst(@$question->title) }}</td>
+                                <td>{{ Str::limit(ucfirst(@$question->title), 20) }}</td>
                                 <td>
                                     <img width="200px" height="100px" src="{{ Storage::disk('public')->url('questions/').$question->image }}">
                                 </td>

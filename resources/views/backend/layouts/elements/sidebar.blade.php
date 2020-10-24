@@ -4,9 +4,9 @@
         <a href="#" class="img logo rounded-circle mb-5" style="background-image: url({{ asset('backend') }}/images/logo.png);"></a>
         <ul class="list-unstyled components mb-5">
             <li class="active">
-                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">My Courses</a>
-                <ul class="collapse list-unstyled" id="homeSubmenu">
-                    <li>
+                <a href="#Courses" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">My Courses</a>
+                <ul class="collapse list-unstyled" id="Courses">
+                    <li class="{{ request()->routeIs('/dashboard/maths/learn') ? 'active' : ''  }}">
                         <a href="{{ route('learn.maths') }}">Math</a>
                     </li>
                 </ul>
