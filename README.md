@@ -7,4 +7,6 @@
 7. Run this command: php artisan key:generate
 8. Set database name into .env file example(DB_DATABASE=maatuniversity)
 9. Run this command: php artisan migrate
+10. Finallyrun this command: php artisan serve
+11. Open Your any browser and hit this url: http://127.0.0.1:8000/
   ---- Thank-You -----
