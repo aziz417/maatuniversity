@@ -12,6 +12,7 @@
                             <tr>
                                 <th scope="col">#</th>
                                 <th scope="col">Title</th>
+                                <th scope="col">Image</th>
                                 <th scope="col">Status</th>
                                 <th scope="col">Created By</th>
                                 <th scope="col">Updated By</th>
@@ -24,6 +25,9 @@
                                 <th scope="row">{{ ++$key }}</th>
                                 <td>{{ ucfirst(@$question->title) }}</td>
                                 <td>
+                                    <img width="200px" height="100px" src="{{ Storage::disk('public')->url('questions/').$question->image }}">
+                                </td>
+                                <td>
                                     <a href="{{ route('status.change', $question->slug) }}">
                                         <span id="status" class="badge  {{ $question->status == 1 ? 'badge-primary' : ' badge-warning' }}">
                                             <strong>  {{ $question->status == 1 ? 'Active' : 'Deactivate' }}</strong>
@@ -33,12 +37,16 @@
                                 <td>{{ ucfirst(@$question->createdUser->name) }}</td>
                                 <td>{{ ucfirst(@$question->updatedUser->name) }}</td>
                                 <td>
+                                    <a href="{{ route('add.option', $question->id) }}"
+                                       class="btn-sm btn-success">
+                                        <i class="fa fa-plus"></i> <strong></strong>
+                                    </a>
                                     <a href="{{ route('questions.edit', $question->slug) }}"
                                        class="btn-sm btn-info">
-                                        <i class="fa fa-pencil-square-o"></i> <strong>Edit</strong>
+                                        <i class="fa fa-pencil-square-o"></i> <strong></strong>
                                     </a>
 
-                                    <button type="button" onclick="deleteItem('{{ $question->slug }}')" class="btn-sm btn-danger"><i class="fa fa-trash-o"></i> <strong>Delete</strong></button>
+                                    <button type="button" onclick="deleteItem('{{ $question->slug }}')" class="btn-sm btn-danger"><i class="fa fa-trash-o"></i> <strong></strong></button>
 
                                     <form id="delete-form-{{ $question->slug }}" style="display:none" action="{{ route('questions.destroy', $question->slug) }}" method="post">
                                         @csrf

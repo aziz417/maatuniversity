@@ -21,7 +21,7 @@ class QuestionRequest extends FormRequest
         return [
             'lesson_id' => 'required',
             'title' => 'required|string|max:255',
-            'audio' => 'nullable|mimes:application/octet-stream,audio/mpeg,mpga,mp3,wav',
+            'image' => 'nullable|mimes:jpeg,jpg,png,gif',
         ];
     }
 }

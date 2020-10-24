@@ -15,13 +15,20 @@ class LearnController extends Controller
 {
     public function allQuestion()
     {
-        return view('backend.learning.math.question');
+        $lessons = [
+            'Lesson 1.1: Adding and Subtraction',
+            'Lesson 1.2: Addition Computation Through 500',
+            'Lesson 1.3: Finding Difference',
+        ];
+        return view('backend.learning.math.question', compact('lessons'));
     }
 
     public function mathQuestion($id)
     {
         Session::forget('lesson_id');
-        $questions = Question::with('options')->active()->where('lesson_id', $id)
+        $questions = Question::with(['options' => function ($q) {
+            $q->inRandomOrder();
+        }])->active()->where('lesson_id', $id)
             ->inRandomOrder()->limit(10)->get();
         Session::put('lesson_id', $id);
 

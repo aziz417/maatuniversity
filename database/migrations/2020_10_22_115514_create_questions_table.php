@@ -17,7 +17,7 @@ class CreateQuestionsTable extends Migration
             $table->id();
             $table->unsignedBigInteger('lesson_id')->nullable();
             $table->string('title', 250);
-            $table->string('audio', 250)->nullable();
+            $table->string('image', 250)->nullable();
             $table->string('slug', 250);
             $table->tinyInteger('status')->default(1);
             $table->unsignedBigInteger('created_by')->nullable();

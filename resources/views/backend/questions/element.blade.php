@@ -20,9 +20,9 @@
        </div>
 
        <div class="form-group">
-           <label for="audio">Audio</label>
-           <input type="file" value="{{ isset($question->audio) ? $question->audio : old('audio')}}" name="audio" class="form-control" id="audio">
-           @error('audio')
+           <label for="image">Image</label>
+           <input type="file" name="img" class="form-control" id="image">
+           @error('image')
            <div class="alert alert-danger">{{ $message }}</div>
            @enderror
        </div>

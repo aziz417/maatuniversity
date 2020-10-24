@@ -2,17 +2,18 @@
 
 namespace App\Http\Controllers\backend;
 
+use App\Http\Controllers\CommonController\CommonController;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\QuestionRequest;
 use App\Models\Question;
 use Brian2694\Toastr\Facades\Toastr;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Str;
 
 
 class QuestionController extends Controller
 {
-
     public function index()
     {
         $questions = Question::with('createdUser', 'updatedUser')->paginate(10);
@@ -30,10 +31,23 @@ class QuestionController extends Controller
     public function store(QuestionRequest $request)
     {
         $request->status = !$request->status;
+        if ($request->img){
+
+            if ($request->hasFile('img')){
+
+                $slug = Str::slug($request->title);
+                $image = $request->file('img');
+                $image_name = CommonController::fileUploaded(
+                    $slug, false, $image, 'questions', ['width' => '200', 'height' => '200']
+                );
+                $request['image'] = $image_name;
+            }
+        }
+
         $onlyGo = $request->only([
             'lesson_id',
             'title',
-            'audio',
+            'image',
             'slug',
             'status',
             'created_by',

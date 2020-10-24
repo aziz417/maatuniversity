@@ -7,7 +7,7 @@
                     <div class="card-header"><span class="float-right btn btn-success"><i class="fa fa-plus"></i> Create</span></div>
 
                     <div class="card-body">
-                        <form method="POST" action="{{ route('questions.update', $question->slug) }}">
+                        <form method="POST" enctype="multipart/form-data" action="{{ route('questions.update', $question->slug) }}">
                             @csrf
                             @method('PUT')
 

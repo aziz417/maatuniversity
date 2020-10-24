@@ -6,7 +6,7 @@
         <div class="card">
             <span class="text-success message" style="display: none"></span>
             <div class="card-body">
-                @foreach($questions as $key=>$question)
+                @forelse($questions as $key=>$question)
                     <div class="single-question mb-30">
                         <div class="row">
                             <div class="col-sm-12 col-12">
@@ -19,6 +19,11 @@
                                         {{ $question->title }}
                                     </strong>
                                 </div>
+                                @if($question->image)
+                                    <div class="mb-lg-3">
+                                        <img width="400px" height="200px" class="img-responsive btn-warning" src="{{ Storage::disk('public')->url('questions/').$question->image }}">
+                                    </div>
+                                @endif
                                 @foreach($question->options as $option)
                                     @if($option->option)
                                         <span class="btn btn-warning" id="option-{{ $option->id }}"
@@ -28,17 +33,20 @@
                                         <span class="btn btn-warning m-2"
                                               style="border: 2px solid #ffc107!important; padding: 2px!important;"
                                               id="option-{{ $option->id }}" onclick="correctAnswer({{ $option->id }})">
-                                            <img src="{{ Storage::disk('public')->url('options/').$option->optionImage }}">
+                                            <img width="80px" height="70px" src="{{ Storage::disk('public')->url('options/').$option->optionImage }}">
                                         </span>
                                     @endif
                                 @endforeach
                             </div>
                         </div>
                     </div>
-                @endforeach
-                @php $lesson_id = Session::get('lesson_id') @endphp
-                <a class="btn btn-warning float-right" href="{{ route('summery.index', $lesson_id) }}">Your study
-                    summary </a>
+
+                @empty
+                    <p class="text-danger text-center">Sorry No Questions</p>
+                @endforelse
+                    @php $lesson_id = Session::get('lesson_id') @endphp
+                    <a class="btn btn-warning float-right" href="{{ route('summery.index', $lesson_id) }}">Your study
+                        summary </a>
 
             </div>
         </div>

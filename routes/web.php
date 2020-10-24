@@ -24,8 +24,11 @@ Route::get('/home', 'HomeController@index')->name('home');
 // backend area
 Route::group(['prefix' => 'dashboard', 'middleware' => ['auth','auth'], 'namespace' => 'backend'], function () {
     Route::resource('questions', 'QuestionController');
+    Route::get('question/option/create/{question}', 'OptionController@addOption')->name('add.option');
     Route::get('questions/status/change/{question}', 'QuestionController@statusChange')->name('status.change');
+
     Route::resource('options', 'OptionController');
+
     Route::get('maths/learn', 'learning\LearnController@allQuestion')->name('learn.maths');
     Route::get('maths/questions/{question}', 'learning\LearnController@mathQuestion')->name('math.questions');
     Route::get('question/answer', 'learning\LearnController@questionAnswer');

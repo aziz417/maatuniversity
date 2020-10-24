@@ -6,7 +6,20 @@
   <component name="ChangeListManager">
     <list default="true" id="d5397425-054e-4e72-bfc8-ffd567b9b199" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/backend/OptionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/backend/OptionController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/backend/QuestionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/backend/QuestionController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/backend/learning/LearnController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/backend/learning/LearnController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/QuestionRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/QuestionRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Question.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Question.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_22_115514_create_questions_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_22_115514_create_questions_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/backend/learning/math/answer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/learning/math/answer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/learning/math/question.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/learning/math/question.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/options/element.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/options/element.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/questions/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/questions/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/questions/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/questions/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/questions/element.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/questions/element.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/questions/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/questions/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,7 +184,7 @@
       <updated>1603352899021</updated>
       <workItem from="1603352900374" duration="31674000" />
       <workItem from="1603415900654" duration="52447000" />
-      <workItem from="1603501517812" duration="10733000" />
+      <workItem from="1603501517812" duration="16648000" />
     </task>
     <servers />
   </component>
@@ -179,17 +192,17 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1603441766248">
+    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1603513280328">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1603441766248" />
+    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1603513280328" />
     <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1603417291880">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1603417291880" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1603479868961">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1603517228638">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1603479868961" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1603517228638" />
   </component>
 </project>

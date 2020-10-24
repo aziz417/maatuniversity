@@ -29,6 +29,11 @@ class OptionController extends Controller
         return view('backend.options.create');
     }
 
+    public function addOption($id)
+    {
+        return view('backend.options.create', compact('id'));
+    }
+
 
     public function store(OptionRequest $request)
     {
@@ -45,7 +50,12 @@ class OptionController extends Controller
                $request['optionImage'] = $image_name;
            }
        }
-        $request['question_id'] = Session::get('question_id');
+       if ($request->question_id){
+           $request['question_id'] = $request->question_id;
+       }else{
+           $request['question_id'] = Session::get('question_id');
+       }
+
         $option = Option::create($request->all());
         if ($option){
             Toastr::success('Option create successfully', 'Success', ["positionClass" => "toast-top-right"]);

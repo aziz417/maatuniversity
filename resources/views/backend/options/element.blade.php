@@ -3,6 +3,9 @@
        <label>Image</label>
        <input type="checkbox" id="optionImage">
        <label>Text</label>
+       @isset($id)
+           <input type="hidden" value="{{ $id }}" name="question_id">
+       @endisset
        <input type="checkbox" id="optionText">  <a class="text-primary pl-lg-5" href="{{ route('options.create') }}">Refresh</a>
        <div class="form-group" id="optionField">
            <label for="option">option</label>

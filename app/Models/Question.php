@@ -17,7 +17,7 @@ class Question extends Model
     protected $fillable = [
         'lesson_id',
         'title',
-        'audio',
+        'image',
         'slug',
         'status',
         'created_by',
